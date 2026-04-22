@@ -4,11 +4,11 @@ import {
 	InstanceStatus,
 	type SomeCompanionConfigField,
 } from '@companion-module/base'
-import { getActions } from './actions'
-import { getVariables, brushTypeEmoji } from './variables'
-import { getPresets } from './presets'
-import { getFeedbacks } from './feedbacks'
-import { SlideDrawAPI, type PresetState, type SlideState, type ConnectionState, type SettingsState } from './api'
+import { getActions } from './actions.js'
+import { getVariables, brushTypeEmoji } from './variables.js'
+import { getPresets } from './presets.js'
+import { getFeedbacks } from './feedbacks.js'
+import { SlideDrawAPI, type PresetState, type SlideState, type ConnectionState, type SettingsState } from './api.js'
 
 interface ModuleConfig {
 	ipad: string // bonjour-device field: "ip:port" or manual entry

@@ -1,5 +1,5 @@
 import { InstanceStatus, type CompanionActionDefinitions } from '@companion-module/base'
-import type { SlideDrawInstance } from './main'
+import type { SlideDrawInstance } from './main.js'
 
 export function getActions(instance: SlideDrawInstance): CompanionActionDefinitions {
 	return {
@@ -289,16 +289,16 @@ export function getActions(instance: SlideDrawInstance): CompanionActionDefiniti
 			],
 			callback: async (action) => {
 				try {
-					const settingKey = String(action.options['setting']) as keyof import('./api').SettingsState
+					const settingKey = String(action.options['setting']) as keyof import('./api.js').SettingsState
 					// Get current value and toggle it
 					const settings = await instance.api.getSettings()
 					const currentValue = settings[settingKey]
 					if (typeof currentValue !== 'boolean') {
-						instance.log('warn', `Setting ${settingKey} is not a boolean toggle`)
+						instance.log('warn', `Setting ${String(settingKey)} is not a boolean toggle`)
 						return
 					}
 					await instance.api.updateSettings({ [settingKey]: !currentValue })
-					instance.log('info', `Toggled ${settingKey}: ${currentValue} → ${!currentValue}`)
+					instance.log('info', `Toggled ${String(settingKey)}: ${String(currentValue)} → ${String(!currentValue)}`)
 				} catch (e) {
 					instance.log('error', `Toggle setting failed: ${e}`)
 				}

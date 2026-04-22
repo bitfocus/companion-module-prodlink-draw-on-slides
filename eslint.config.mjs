@@ -1,3 +1,5 @@
-import { companionModuleLintConfig } from '@companion-module/tools/eslint/config.mjs'
+import { generateEslintConfig } from '@companion-module/tools/eslint/config.mjs'
 
-export default [...companionModuleLintConfig]
+export default generateEslintConfig({
+	enableTypescript: true,
+})

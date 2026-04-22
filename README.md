@@ -17,18 +17,18 @@ A [Bitfocus Companion](https://bitfocus.io/companion) module for controlling the
 
 ## Requirements
 
-- [Bitfocus Companion](https://bitfocus.io/companion) v3.x or later
+- [Bitfocus Companion](https://bitfocus.io/companion) v4.0 or later
 - [Draw on Slides](https://apps.apple.com/app/draw-on-slides/id6738948517) iPad app with HTTP API enabled
 
 ## Installation
 
-### From Companion (coming soon)
-The module will be available in Companion's module list once submitted to the Bitfocus registry.
+### From Companion
+The module will be available in Companion's module list once approved by Bitfocus.
 
 ### Development / Manual Install
 1. Clone this repo into your Companion developer modules directory
-2. `npm install`
-3. `npm run build`
+2. `yarn install`
+3. `yarn build`
 4. Restart Companion and add a "ProdLink: Draw on Slides" connection
 
 ## Setup
@@ -41,8 +41,8 @@ The module will be available in Companion's module list once submitted to the Bi
 ## Development
 
 ```bash
-npm install
-npm run dev    # Watch mode — recompiles on changes
+yarn install
+yarn dev       # Watch mode — recompiles on changes
 ```
 
 ## License
